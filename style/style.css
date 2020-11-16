@@ -1,0 +1,505 @@
+designstyle.css
+
+/* CSS Document for Gallery */
+
+A {
+	COLOR: #0c7e7e; FONT-FAMILY: verdana,arial,helvetica,ms sans serif; FONT-SIZE: 10pt; TEXT-DECORATION: none; -webkit-text-size-adjust: 90%;
+}
+TD,P,body {
+	COLOR: #0c7e7e; FONT-FAMILY: verdana,arial,helvetica,ms sans serif; FONT-SIZE: 10pt; TEXT-DECORATION: none; -webkit-text-size-adjust: 90%;
+}
+
+A:link {
+	COLOR: #0c7e7e; FONT-FAMILY: verdana,arial,helvetica,ms sans serif; FONT-SIZE: 10pt; TEXT-DECORATION: underline; -webkit-text-size-adjust: 90%;
+}
+
+A:visited {
+	COLOR: #0c7e7e; FONT-FAMILY: verdana,arial,helvetica,ms sans serif; FONT-SIZE: 10pt; TEXT-DECORATION: underline; -webkit-text-size-adjust: 90%;
+}
+
+A:hover {
+	COLOR: #0c7e7e; FONT-FAMILY: verdana,arial,helvetica,ms sans serif; FONT-SIZE: 10pt; TEXT-DECORATION: underline; font-weight: bold; -webkit-text-size-adjust: 90%;
+}
+
+BODY
+{
+	margin: 0;
+	padding: 0;
+	background-color: #fff8d8;
+}
+
+/* Properties for wrapper */
+#wrapper {
+	width: 1024px;
+	height: 634px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+
+/* Properties for home */
+#home {
+	width: 350px;
+	height: 82px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+
+/* Properties for navigation */
+#nav1 {
+	width: 80px;
+	height: 30px;
+	position: absolute;
+	top: 19px;
+	left: 471px;
+
+}
+
+
+/* Properties for navigation */
+#nav2 {
+	width: 110px;
+	height: 30px;
+	position: absolute;
+	top: 19px;
+	left: 572px;
+
+}
+
+
+/* Properties for navigation */
+#nav3 {
+	width: 94px;
+	height: 30px;
+	position: absolute;
+	top: 19px;
+	left: 711px;
+
+}
+
+
+/* Properties for navigation */
+#button1 {
+	width: 52px;
+	height: 52px;
+	position: absolute;
+	top: 3px;
+	left: 830px;
+
+}
+
+
+/* Properties for navigation */
+#button2 {
+	width: 52px;
+	height: 52px;
+	position: absolute;
+	top: 3px;
+	left: 898px;
+
+}
+
+
+/* Properties for navigation */
+#button3 {
+	width: 52px;
+	height: 52px;
+	position: absolute;
+	top: 3px;
+	left: 966px;
+
+}
+
+
+/* Properties for twitter */
+#twitter {
+	width: 220px;
+	height: 500px;
+	position: absolute;
+	top: 110px;
+	left: 775px;
+	background: rgba(255,248,216,0.5);
+	border: 2px solid #0c7e7e;
+	border-radius: 6px;
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	-khtml-border-radius: 8px;
+}
+
+
+/* Properties for digital art thumbs */
+#artthumbs1 {
+	width: 410px;
+	height: 240px;
+	position: absolute;
+	top: 160px;
+	left: 604px;
+}
+
+
+/* Properties for traditional art thumbs */
+#artthumbs2 {
+	width: 410px;
+	height: 175px;
+	position: absolute;
+	top: 440px;
+	left: 604px;
+}
+
+
+/* Properties for list thumbs */
+#artthumbs1 ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ 
+
+/* Properties for list thumbs */
+#artthumbs1 li img {
+	float: left;
+	margin: 3px;
+
+}
+
+/* Properties for list thumbs */
+#artthumbs2 ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ 
+
+/* Properties for list thumbs */
+#artthumbs2 li img {
+	float: left;
+	margin: 3px;
+
+}
+
+
+/* Properties for art preview */
+#artpreview {
+	width: 445px;
+	height: 395px;
+	position: absolute;
+	top: 160px;
+	left: 77px;
+}
+
+
+
+/* Properties for previous button */
+#prev {
+	width: 35px;
+	height: 54px;
+	position: absolute;
+	top: 320px;
+	left: 42px;
+
+}
+
+
+/* Properties for next button */
+#next {
+	width: 35px;
+	height: 54px;
+	position: absolute;
+	top: 320px;
+	left: 530px;
+
+}
+
+
+/* Properties for art title */
+#arttitle {
+	width: 303px;
+	height: 34px;
+	position: absolute;
+	top: 90px;
+	left: 660px;
+}
+
+
+
+/* Properties for digital title */
+#digitaltitle {
+	width: 84px;
+	height: 20px;
+	position: absolute;
+	top: 135px;
+	left: 769px;
+}
+
+
+/* Properties for traditional title */
+#traditiontitle {
+	width: 215px;
+	height: 22px;
+	position: absolute;
+	top: 414px;
+	left: 700px;
+}
+
+
+/* Properties for art and illustration */
+#artillustration {
+	width: 360px;
+	height: 45px;
+	position: absolute;
+	top: 445px;
+	left: 344px;
+}
+
+
+/* Properties for photography */
+#photography {
+	width: 230px;
+	height: 40px;
+	position: absolute;
+	top: 487px;
+	left: 342px;
+}
+
+
+/* Properties for design */
+#design {
+	width: 124px;
+	height: 40px;
+	position: absolute;
+	top: 487px;
+	left: 572px;
+}
+
+
+/* Properties for writing */
+#writing {
+	width: 180px;
+	height: 35px;
+	position: absolute;
+	top: 527px;
+	left: 362px;
+}
+
+
+/* Properties for video */
+#video {
+	width: 125px;
+	height: 35px;
+	position: absolute;
+	top: 527px;
+	left: 542px;
+}
+
+/* Properties for video title */
+#videotitle {
+	width: 110px;
+	height: 30px;
+	position: absolute;
+	top: 125px;
+	left: 460px;
+}
+
+/* Properties for video */
+#video1 {
+	width: 400px;
+	height: 225px;
+	position: absolute;
+	top: 180px;
+	left: 105px;
+	border: 2px solid #0c7e7e;
+}
+
+/* Properties for video */
+#video2 {
+	width: 400px;
+	height: 225px;
+	position: absolute;
+	top: 180px;
+	left: 532px;
+	border: 2px solid #0c7e7e;
+}
+
+/* Properties for video */
+#video1desc {
+	width: 400px;
+	height: 130px;
+	position: absolute;
+	top: 410px;
+	left: 105px;
+}
+
+/* Properties for video */
+#video2desc {
+	width: 400px;
+	height: 130px;
+	position: absolute;
+	top: 410px;
+	left: 532px;
+}
+
+/* Properties for portfolio */
+#port1 {
+	width: 163px;
+	height: 225px;
+	position: absolute;
+	top: 140px;
+	left: 85px;
+}
+
+/* Properties for portfolio */
+#port1desc {
+	width: 163px;
+	height: 220px;
+	position: absolute;
+	top: 365px;
+	left: 85px;
+}
+
+/* Properties for portfolio */
+#port2 {
+	width: 163px;
+	height: 225px;
+	position: absolute;
+	top: 140px;
+	left: 260px;
+}
+
+/* Properties for portfolio */
+#port2desc {
+	width: 163px;
+	height: 220px;
+	position: absolute;
+	top: 365px;
+	left: 260px;
+}
+
+/* Properties for portfolio */
+#port3 {
+	width: 163px;
+	height: 225px;
+	position: absolute;
+	top: 140px;
+	left: 435px;
+}
+
+/* Properties for portfolio */
+#port3desc {
+	width: 163px;
+	height: 220px;
+	position: absolute;
+	top: 365px;
+	left: 435px;
+}
+
+/* Properties for portfolio */
+#port4 {
+	width: 163px;
+	height: 225px;
+	position: absolute;
+	top: 140px;
+	left: 610px;
+}
+
+/* Properties for portfolio */
+#port4desc {
+	width: 163px;
+	height: 220px;
+	position: absolute;
+	top: 365px;
+	left: 610px;
+}
+
+/* Properties for portfolio */
+#port5 {
+	width: 163px;
+	height: 225px;
+	position: absolute;
+	top: 140px;
+	left: 785px;
+}
+
+/* Properties for portfolio */
+#port5desc {
+	width: 163px;
+	height: 190px;
+	position: absolute;
+	top: 365px;
+	left: 785px;
+}
+
+/* Properties for about text */
+#abouttext1 {
+	width: 370px;
+	height: 200px;
+	position: absolute;
+	top: 140px;
+	left: 580px;
+}
+
+/* Properties for about text */
+#abouttext2 {
+	width: 530px;
+	height: 160px;
+	position: absolute;
+	top: 340px;
+	left: 410px;
+}
+
+/* Properties for logo */
+#logo {
+	width: 175px;
+	height: 175px;
+	position: absolute;
+	top: 140px;
+	left: 390px;
+}
+
+/* Properties for name */
+#name {
+	width: 262px;
+	height: 26px;
+	position: absolute;
+	top: 500px;
+	left: 680px;
+}
+
+/* Properties for emaillink */
+#emaillink {
+	width: 492px;
+	height: 96px;
+	position: absolute;
+	top: 240px;
+	left: 425px;
+}
+
+/* Properties for facebooklink */
+#facebooklink {
+	width: 492px;
+	height: 96px;
+	position: absolute;
+	top: 340px;
+	left: 425px;
+}
+
+/* Properties for twitterlink */
+#twitterlink {
+	width: 492px;
+	height: 96px;
+	position: absolute;
+	top: 440px;
+	left: 425px;
+}
+
+/* Properties for contacttext */
+#contacttext {
+	width: 550px;
+	height: 80px;
+	position: absolute;
+	top: 160px;
+	left: 400px;
+}

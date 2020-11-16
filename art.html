@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Floating Note - Art & Illustration</title>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META name="owner" CONTENT="Daniel Frampton">
+<meta name="description" content="Creative Communications by Daniel Frampton - Artwork, Illustration, Writing, Photography, Design and Video" />
+<meta name="robots" content="index, follow">
+<link rel="shortcut icon" href="favicon.ico" type="image/ico"/>
+
+<!-- icon in the highest resolution we need it for -->
+<link rel="icon" sizes="192x192" href="icon.png">
+
+<!-- reuse same icon for Safari -->
+<link rel="apple-touch-icon" href="ios-icon.png">
+
+<!-- multiple icons for IE -->
+<meta name="msapplication-square310x310logo" content="icon_largetile.png">
+<meta name="msapplication-square70x70logo" content="icon_smalltile.png">
+<meta name="msapplication-square150x150logo" content="icon_mediumtile.png">
+<meta name="msapplication-wide310x150logo" content="icon_widetile.png">
+
+
+<script type="text/javascript">
+// Photo Gallery Load script.
+// With image cross fade effect for those browsers that support it.
+// Script copyright (C) 2004-2008 http://www.cryer.co.uk/.
+// Script is free to use provided this copyright header is included.
+var currentGalleryLink = new Array();
+function LoadPicture(pictureName,imageFile)
+{
+	var picture=document.getElementById(pictureName);
+	if (picture.filters)
+	{
+		picture.style.filter="blendTrans(duration=1)";
+		picture.filters.blendTrans.Apply();
+	}
+	picture.src = imageFile;
+	if (picture.filters)
+	{
+		picture.filters.blendTrans.Play();
+	}
+	// Which link is currently selected?
+	for (i=0; i < document.links.length;i++)
+	{
+	   	var l=document.links[i];
+	   	var n=l.getAttributeNode('onclick');
+		if (n)
+		{
+			var onclick = n.value;
+	   		if ((onclick) &&
+	   			(onclick.indexOf(pictureName) > 0) &&
+	   			(onclick.indexOf(imageFile) > 0))
+	   		{
+			    currentGalleryLink[pictureName] = i;
+			    break;
+			}
+		}
+	}
+}
+function LoadPrev(pictureName)
+{
+	var current = currentGalleryLink[pictureName];
+	if (current == null) current = document.links.length+1;
+	var alt = null;
+	for (i=document.links.length-1;i>=0;i--)
+	{
+		var link=document.links[i];
+		var node = link.getAttributeNode('onclick');
+		if (node)
+		{
+			var onclick = node.nodeValue;
+			if ((onclick) &&
+				(onclick.indexOf('LoadPicture') >= 0) &&
+				(onclick.indexOf(pictureName) > 0))
+			{
+				if (i < current)
+				{
+					eval(onclick);
+					return;
+				} else if (alt == null)
+					alt = onclick;
+			}
+		}
+	}
+	if (alt) eval(alt);
+}
+function LoadNext(pictureName)
+{
+	var current = currentGalleryLink[pictureName];
+	if (current == null) {
+		currentGalleryLink[pictureName]=-1;
+		LoadNext(pictureName);
+		current = currentGalleryLink[pictureName];
+	}
+	var alt = null;
+	for (i=0;i<document.links.length;i++) {
+		var link = document.links[i];
+		var node = link.getAttributeNode('onclick');
+		if (node)
+		{
+			var onclick = node.value;
+			if ((onclick) &&
+				(onclick.indexOf('LoadPicture') >= 0) &&
+				(onclick.indexOf(pictureName) > 0))
+			{
+				if (i > current)
+				{
+					eval(onclick);
+					return;
+				} else if (alt == null)
+					alt = onclick;
+			}
+		}
+	}
+	if (alt) {
+		eval(alt);
+	}
+}
+</script>
+
+
+</head>
+
+<body>
+
+<div id="wrapper" style="background-image:url(images/artbg.jpg)">
+
+<div id="home">
+<a href="index.html"><img src="images/home.jpg" width=350 height=82 border=none alt="Home" title="Home"></a>
+</div>
+
+<div id="nav1">
+
+<a href="about.html"><img src="images/about.jpg" onmouseover="this.src='images/about2.jpg'" onmouseout="this.src='images/about.jpg'" width=80 height=30 border=none alt="About" title="About"></a>
+
+</div>
+
+<div id="nav2">
+
+<a href="portfolio.html"><img src="images/portfolio.jpg" onmouseover="this.src='images/portfolio2.jpg'" onmouseout="this.src='images/portfolio.jpg'" width=110 height=30 border=none alt="Portfolio" title="Portfolio"></a>
+
+</div>
+
+<div id="nav3">
+
+<a href="contact.html"><img src="images/contact.jpg" onmouseover="this.src='images/contact2.jpg'" onmouseout="this.src='images/contact.jpg'" width=94 height=30 border=none alt="Contact" title="Contact"></a>
+
+</div>
+
+<div id="button1">
+<a href="http://facebook.com/FloatingNote"><img src="images/facebook.png" width=52 height=52 border=none alt="Facebook" title="Facebook"></a>
+</div>
+<div id="button2">
+<a href="http://twitter.com/FloatingNote"><img src="images/twitter.png" width=52 height=52 border=none alt="Twitter" title="Twitter"></a>
+</div>
+<div id="button3">
+<a href="mailto:floatingnote@outlook.com"><img src="images/email.png" width=52 height=52 border=none alt="Email" title="Email"></a>
+</div>
+
+<div id="arttitle">
+<img src="images/arttitle2.jpg" width="303" height="34" border=none alt="Art & Illustration" title="Art & Illustration">
+</div>
+
+<div id="digitaltitle">
+<img src="images/digitaltitle2.jpg" width="84" height="20" border=none alt="Digital" title="Digital"></div>
+
+
+<div id="prev">
+<a href="#_self" onclick="LoadPrev('Gallery')"><img border="0" src="images/prev.jpg" width="35" height="54"></a>
+</div>
+
+<div id="artpreview">
+
+<img border="0" src="images/digital1.jpg" id="Gallery" width="445" height="395">
+
+</div>
+
+<div id="next">
+<a href="#_self" onclick="LoadNext('Gallery')"><img border="0" src="images/next.jpg" width="35" height="54"></a>
+</div>
+
+
+<div id="artthumbs1">
+
+<ul>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital1.jpg')"><img border="0" src="images/digital1th.jpg" onmouseover="this.src='images/digital1th2.jpg'" onmouseout="this.src='images/digital1th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital19.jpg')"><img border="0" src="images/digital19th.jpg" onmouseover="this.src='images/digital19th2.jpg'" onmouseout="this.src='images/digital19th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital22.jpg')"><img border="0" src="images/digital22th.jpg" onmouseover="this.src='images/digital22th2.jpg'" onmouseout="this.src='images/digital22th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital23.jpg')"><img border="0" src="images/digital23th.jpg" onmouseover="this.src='images/digital23th2.jpg'" onmouseout="this.src='images/digital23th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital26.jpg')"><img border="0" src="images/digital26th.jpg" onmouseover="this.src='images/digital26th2.jpg'" onmouseout="this.src='images/digital26th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital24.jpg')"><img border="0" src="images/digital24th.jpg" onmouseover="this.src='images/digital24th2.jpg'" onmouseout="this.src='images/digital24th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital25.jpg')"><img border="0" src="images/digital25th.jpg" onmouseover="this.src='images/digital25th2.jpg'" onmouseout="this.src='images/digital25th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital2.jpg')"><img border="0" src="images/digital2th.jpg" onmouseover="this.src='images/digital2th2.jpg'" onmouseout="this.src='images/digital2th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital3.jpg')"><img border="0" src="images/digital3th.jpg" onmouseover="this.src='images/digital3th2.jpg'" onmouseout="this.src='images/digital3th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital4.jpg')"><img border="0" src="images/digital4th.jpg" onmouseover="this.src='images/digital4th2.jpg'" onmouseout="this.src='images/digital4th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital5.jpg')"><img border="0" src="images/digital5th.jpg" onmouseover="this.src='images/digital5th2.jpg'" onmouseout="this.src='images/digital5th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital6.jpg')"><img border="0" src="images/digital6th.jpg" onmouseover="this.src='images/digital6th2.jpg'" onmouseout="this.src='images/digital6th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital7.jpg')"><img border="0" src="images/digital7th.jpg" onmouseover="this.src='images/digital7th2.jpg'" onmouseout="this.src='images/digital7th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital8.jpg')"><img border="0" src="images/digital8th.jpg" onmouseover="this.src='images/digital8th2.jpg'" onmouseout="this.src='images/digital8th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital9.jpg')"><img border="0" src="images/digital9th.jpg" onmouseover="this.src='images/digital9th2.jpg'" onmouseout="this.src='images/digital9th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital10.jpg')"><img border="0" src="images/digital10th.jpg" onmouseover="this.src='images/digital10th2.jpg'" onmouseout="this.src='images/digital10th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital11.jpg')"><img border="0" src="images/digital11th.jpg" onmouseover="this.src='images/digital11th2.jpg'" onmouseout="this.src='images/digital11th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital12.jpg')"><img border="0" src="images/digital12th.jpg" onmouseover="this.src='images/digital12th2.jpg'" onmouseout="this.src='images/digital12th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital13.jpg')"><img border="0" src="images/digital13th.jpg" onmouseover="this.src='images/digital13th2.jpg'" onmouseout="this.src='images/digital13th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital14.jpg')"><img border="0" src="images/digital14th.jpg" onmouseover="this.src='images/digital14th2.jpg'" onmouseout="this.src='images/digital14th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital15.jpg')"><img border="0" src="images/digital15th.jpg" onmouseover="this.src='images/digital15th2.jpg'" onmouseout="this.src='images/digital15th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital16.jpg')"><img border="0" src="images/digital16th.jpg" onmouseover="this.src='images/digital16th2.jpg'" onmouseout="this.src='images/digital16th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital17.jpg')"><img border="0" src="images/digital17th.jpg" onmouseover="this.src='images/digital17th2.jpg'" onmouseout="this.src='images/digital17th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital18.jpg')"><img border="0" src="images/digital18th.jpg" onmouseover="this.src='images/digital18th2.jpg'" onmouseout="this.src='images/digital18th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital20.jpg')"><img border="0" src="images/digital20th.jpg" onmouseover="this.src='images/digital20th2.jpg'" onmouseout="this.src='images/digital20th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital21.jpg')"><img border="0" src="images/digital21th.jpg" onmouseover="this.src='images/digital21th2.jpg'" onmouseout="this.src='images/digital21th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital27.jpg')"><img border="0" src="images/digital27th.jpg" onmouseover="this.src='images/digital27th2.jpg'" onmouseout="this.src='images/digital27th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/digital28.jpg')"><img border="0" src="images/digital28th.jpg" onmouseover="this.src='images/digital28th2.jpg'" onmouseout="this.src='images/digital28th.jpg'" width="52" height="52"></a></li>
+</ul>
+</div>
+
+
+<div id="traditiontitle">
+<img src="images/traditiontitle2.jpg" width="215" height="22" border=none alt="Traditional/Paper" title="Traditional/Paper"></div>
+
+<div id="artthumbs2">
+
+<ul>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional22.jpg')"><img border="0" src="images/traditional22th.jpg" onmouseover="this.src='images/traditional22th2.jpg'" onmouseout="this.src='images/traditional22th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional1.jpg')"><img border="0" src="images/traditional1th.jpg" onmouseover="this.src='images/traditional1th2.jpg'" onmouseout="this.src='images/traditional1th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional2.jpg')"><img border="0" src="images/traditional2th.jpg" onmouseover="this.src='images/traditional2th2.jpg'" onmouseout="this.src='images/traditional2th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional3.jpg')"><img border="0" src="images/traditional3th.jpg" onmouseover="this.src='images/traditional3th2.jpg'" onmouseout="this.src='images/traditional3th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional4.jpg')"><img border="0" src="images/traditional4th.jpg" onmouseover="this.src='images/traditional4th2.jpg'" onmouseout="this.src='images/traditional4th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional5.jpg')"><img border="0" src="images/traditional5th.jpg" onmouseover="this.src='images/traditional5th2.jpg'" onmouseout="this.src='images/traditional5th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional6.jpg')"><img border="0" src="images/traditional6th.jpg" onmouseover="this.src='images/traditional6th2.jpg'" onmouseout="this.src='images/traditional6th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional7.jpg')"><img border="0" src="images/traditional7th.jpg" onmouseover="this.src='images/traditional7th2.jpg'" onmouseout="this.src='images/traditional7th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional8.jpg')"><img border="0" src="images/traditional8th.jpg" onmouseover="this.src='images/traditional8th2.jpg'" onmouseout="this.src='images/traditional8th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional9.jpg')"><img border="0" src="images/traditional9th.jpg" onmouseover="this.src='images/traditional9th2.jpg'" onmouseout="this.src='images/traditional9th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional10.jpg')"><img border="0" src="images/traditional10th.jpg" onmouseover="this.src='images/traditional10th2.jpg'" onmouseout="this.src='images/traditional10th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional11.jpg')"><img border="0" src="images/traditional11th.jpg" onmouseover="this.src='images/traditional11th2.jpg'" onmouseout="this.src='images/traditional11th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional12.jpg')"><img border="0" src="images/traditional12th.jpg" onmouseover="this.src='images/traditional12th2.jpg'" onmouseout="this.src='images/traditional12th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional13.jpg')"><img border="0" src="images/traditional13th.jpg" onmouseover="this.src='images/traditional13th2.jpg'" onmouseout="this.src='images/traditional13th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional14.jpg')"><img border="0" src="images/traditional14th.jpg" onmouseover="this.src='images/traditional14th2.jpg'" onmouseout="this.src='images/traditional14th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional15.jpg')"><img border="0" src="images/traditional15th.jpg" onmouseover="this.src='images/traditional15th2.jpg'" onmouseout="this.src='images/traditional15th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional1617.jpg')"><img border="0" src="images/traditional16th.jpg" onmouseover="this.src='images/traditional16th2.jpg'" onmouseout="this.src='images/traditional16th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional18.jpg')"><img border="0" src="images/traditional18th.jpg" onmouseover="this.src='images/traditional18th2.jpg'" onmouseout="this.src='images/traditional18th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional19.jpg')"><img border="0" src="images/traditional19th.jpg" onmouseover="this.src='images/traditional19th2.jpg'" onmouseout="this.src='images/traditional19th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional20.jpg')"><img border="0" src="images/traditional20th.jpg" onmouseover="this.src='images/traditional20th2.jpg'" onmouseout="this.src='images/traditional20th.jpg'" width="52" height="52"></a></li>
+<li><a href="#_self" onclick="LoadPicture('Gallery','images/traditional21.jpg')"><img border="0" src="images/traditional21th.jpg" onmouseover="this.src='images/traditional21th2.jpg'" onmouseout="this.src='images/traditional21th.jpg'" width="52" height="52"></a></li>
+</ul>
+
+</div>
+
+</div>
+
+
+</body></html>
